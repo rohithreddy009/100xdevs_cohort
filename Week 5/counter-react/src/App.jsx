@@ -1,64 +1,44 @@
+import React from 'react';
+
 import { useState } from 'react';
+import Button from './components/Button';
+import Todo from './components/Todo';
 import './App.css';
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      title: 'task a',
-      description: 'hello from task a',
-      completed: false,
-    },
-    {
-      title: 'task b',
-      description: 'hello from task b',
-      completed: false,
-    },
-    {
-      title: 'task c',
-      description: 'hello from task c',
-      completed: false,
-    },
-  ]);
+  const [todos, setTodos] = useState([{
+    title: "hello from title 1",
+    description: "hello from description 1",
+    completed:false
+  },{
+    title: "hello from title 2",
+    description: "hello from description 2",
+    completed:false
+  },{
+    title: "hello from title 3",
+    description: "hello from description 3",
+    completed:false
+  }])
 
-  function addTodo() {
-    setTodos([...todos, { title: 'new todo title', description: 'new todo description' }]);
-  }
-
-  function DummyButton(){
-    console.log("hi there")
-    return <button>helo</button>
-  }
+  
 
   return (
     <div>
-      <button onClick={addTodo}>Add Todo</button>
-      {todos.map(function (todo, index) {
-        return <Todo key={index} title={todo.title} description={todo.description} />;
-      })}
-      <DarkNewTodos todos={todos}></DarkNewTodos>
+      {/* <Todo title={todos[0].title} description={todos[1].description} />  
+      <Todo title={todos[1].title} description={todos[1].description} />   */}
+      
+       {todos.map(function(props){
+        return (<Todo title={props.title} description={props.description}></Todo>)
+       })}
+       <DummyButton></DummyButton>
+      
     </div>
   );
 }
 
-function Todo(props) {
-  return (
-    <div>
-      <h2>{props.title}</h2>
-      <h3>{props.description}</h3>
-    </div>
-  );
-}
-
-function DarkNewTodos(props) {
-  return (
-    <div>
-      {props.todos.map(function (todo) {
-        return <Todo title={todo.title} description={todo.description} />;
-      })}
-      <h2>{props.title}</h2>
-      <h3>{props.description}</h3>
-    </div>
-  );
+function DummyButton(){
+  console.log("re rendered dummy button")
+  return <button>hey</button>
 }
 
 export default App;
