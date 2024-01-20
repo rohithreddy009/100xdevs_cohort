@@ -1,12 +1,14 @@
-import { useState } from "react"
-import './App.css';
+import { useContext, useState } from "react"
+import { CountContext} from "./context"
 
 function App() {
   const [count, setCount] = useState(0);
   
   return (
     <div>
-      <Count count={count} setCount={setCount} />
+      <CountContext.Provider value={count}>
+          <Count count={count} setCount={setCount} />
+      </CountContext.Provider>
     </div>
   )
 }
@@ -18,7 +20,8 @@ function Count({count, setCount}) {
   </div>
 }
 
-function CountRenderer({count}) {
+function CountRenderer() {
+  const count = useContext(CountContext)
   return <div>
     {count}
   </div>
