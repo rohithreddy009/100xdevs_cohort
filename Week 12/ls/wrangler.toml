@@ -6,7 +6,7 @@ compatibility_date = "2024-02-23"
 # Note: Use secrets to store sensitive data.
 # Docs: https://developers.cloudflare.com/workers/platform/environment-variables
 [vars]
-DATABASE_URL = "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiM2FhNjU0NDAtNTU4NS00MTEzLWI2YmUtM2I0MTAyNzljOWMzIiwidGVuYW50X2lkIjoiNTdhNjM1MGQzZDBiNGYzNmI5MjY1ZTg2NDdmZTVmMGQ0MWEyMmE3MWY0YTRmZjkwYWY2NDYzZWJkZWQwYTZjMyIsImludGVybmFsX3NlY3JldCI6IjExNDdmZDE4LWFlMzEtNGYyYy1iNzFjLWYwOTVhM2FkOTA4MyJ9.j-wCjNaz62akIH2G3b7e2_Emp65Y1l2-I8wCYU9nP08"
+DATABASE_URL = "enter your prisma accelerate url"
 
 # Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
 # Docs: https://developers.cloudflare.com/workers/runtime-apis/kv
