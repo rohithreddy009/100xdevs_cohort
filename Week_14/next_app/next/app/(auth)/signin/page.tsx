@@ -2,7 +2,7 @@ import { SigninComponent } from "@/components/Signin";
 
 export default function Signin() {
     return <div>
-        hello
+        hi there
         <SigninComponent />
     </div>
 }

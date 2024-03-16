@@ -18,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="p-4 border-b">Medium Website</div>
+        <div className="border-b p-3">fake medium</div>
         {children}
         </body>
     </html>
