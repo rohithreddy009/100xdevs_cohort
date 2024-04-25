@@ -1,7 +1,0 @@
-Rating
-
-Rate limiting
-
-captchas
-
-DDOS protection
