@@ -25,7 +25,7 @@ app.post('/generate-otp', (req, res) => {
   res.status(200).json({ message: "OTP generated and logged" });
 });
 
-// Endpoint to reset password.
+// Endpoint to reset password
 app.post('/reset-password', (req, res) => {
   const { email, otp, newPassword } = req.body;
   if (!email || !otp || !newPassword) {
