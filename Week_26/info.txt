@@ -4,3 +4,6 @@
 
 2.  Prometheus   
     Grafana
+
+3. K8s
+   Deploying to vultr
