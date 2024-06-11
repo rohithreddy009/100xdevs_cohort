@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: nginx-replicaset
+  namespace: backend
 spec:
   replicas: 3
   selector:
