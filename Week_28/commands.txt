@@ -1,0 +1,15 @@
+kubectl config get-contexts
+
+kubectl config use-context <context-name>
+
+kubectl config view --minify --output 'jsonpath={..namespace}'
+
+kubectl config set-context --current --namespace=<namespace>
+
+kubectl config current-context
+
+kubectl get pods --all-namespaces
+
+kubectl get nodes
+
+
